@@ -1,0 +1,47 @@
+// First refernce HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .usersBox{
+            display: flex;
+            border: 2px solid black
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+    </div>
+
+    <script src="projectArray.js"> </script>
+</body>
+
+</html>
+
+
+//JavaScript  - Link: https://stackoverflow.com/questions/68983337/display-an-array-of-objects-on-a-page
+const container = document.querySelector(".container")
+
+const data = [
+  {name: "george", age: 12},
+  {name: "Maria", age: 35},
+  {name: "Lucas", age: 65}
+]
+
+for(let i = 0; i < data.length; i++){
+  const usersBox = document.createElement("div")
+  usersBox.className = "usersBox"
+  
+  const list = document.createElement("p")
+  
+  list.innerText = `${data[i].name}: ${data[i].age}`
+  usersBox.appendChild(list)
+  
+  container.appendChild(usersBox)
+}

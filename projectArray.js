@@ -1,3 +1,5 @@
+const showToDocument = document.querySelector(".container")
+
 let KPM = "Ceryu"
 
 var store = [
@@ -32,23 +34,84 @@ var store = [
     },
 ]
 
-console.log(store);
 
+for (let i=0; i < store.length; i++){
+    const usersbox= document.createElement("div"); 
+    // usersBox.className = "userBox";
 
-// //Function
-// function handleClick(){
-//     let name1 = document.getElementById("name").value;
-//     console.log("click",name1);
-//     document.getElementById("element-append").append(name1)
-// }
+    const list = document.createElement("p");
 
-// // //Access the element
-// document.getElementById("click").onclick = () => {
-//     handleClick()
-// }
-
+    list.innerText = `${store[i].name} : ${store[i].age} : ${store[i].address}`;
+    usersbox.appendChild(list);
+    showToDocument.appendChild(usersbox);
+}
 
 document.getElementById("click").onclick = () => {
-    let namestoreing = document.getElementById(name).value;
-    console.log("click", namestoreing);
+    let namestore = document.getElementById("name").value;
+    // store.name.push(namestore);
+    let age = document.getElementById("age").value;
+    let address = document.getElementById("address").value;
 }
+
+
+store.name="Vanakam",
+store.age=20,
+store.address = "Hello"
+console.log(store);
+// document.getElementById("name")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//OLD WORK
+
+
+
+
+
+
+// store.forEach((product) => {
+//     console.log(product)
+// })
+
+
+// document.getElementById("name")
+
+
+// // //Function
+// // function handleClick(){
+// //     let name1 = document.getElementById("name").value;
+// //     console.log("click",name1);
+// //     document.getElementById("element-append").append(name1)
+// // }
+
+// // // //Access the element
+// // document.getElementById("click").onclick = () => {
+// //     handleClick()
+// // }
+
+
+// document.getElementById("click").onclick = () => {
+//     let namestoreing = document.getElementById(name).value;
+//     console.log("click", namestoreing);
+// }
