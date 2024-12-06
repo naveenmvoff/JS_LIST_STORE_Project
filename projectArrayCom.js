@@ -1,8 +1,5 @@
 const showToDocument = document.querySelector(".container");
-const tableBorder = document.querySelector(".tableClass");
-const rowBorder = document.querySelector(".rowClass")
-
-
+const tableBorder = document.querySelector(".tableClass")
 
 let KPM = "Ceryu"
 
@@ -61,22 +58,15 @@ const tableElem = document.createElement("table"); // use to create a Table
 
 for (let i=0; i < store.length; i++){
     //Create Table
-    // // tableElem.className = "userBox";
-    // const tabRow = document.createElement("tr");
-    // const tabCol1 = document.createElement("td");  //First Col
-    // // const word1 = document.createElement("h1");     //First Element Col
-    // const tabCol2 = document.createElement("td");  //Second Col
-    // // const word2 = document.createElement("h1");    //Second Element Col
-    // const tabCol3 = document.createElement("td");  //Third Col
-    // // const word3 = document.createElement("h1");    //Third Element Col
-
-    const rowBorder = document.getElementsByClassName("rowClass");
-    const colBorder1 = document.getElementsByClassName("colClass1");
+    // tableElem.className = "userBox";
+    const tabRow = document.createElement("tr");
+    const tabCol1 = document.createElement("td");  //First Col
     const word1 = document.createElement("h1");     //First Element Col
-    const colBorder2 = document.getElementsByClassName("colClass2");
+    const tabCol2 = document.createElement("td");  //Second Col
     const word2 = document.createElement("h1");    //Second Element Col
-    const colBorder3 = document.getElementsByClassName("colClass3");
+    const tabCol3 = document.createElement("td");  //Third Col
     const word3 = document.createElement("h1");    //Third Element Col
+
 
 
     //Assign a Value to the Table
@@ -85,14 +75,13 @@ for (let i=0; i < store.length; i++){
     word2.innerText = `${store[i].age}`;
     word3.innerText = `${store[i].address}`;
     // tableBorder.appendChild(word1); 
-    tableBorder.appendChild(rowBorder);
-    rowBorder.appendChild(colBorder1);
-    colBorder1.appendChild(word1);
-    rowBorder.appendChild(colBorder2);
-    colBorder2.appendChild(word2);
-    rowBorder.appendChild(colBorder3);
-    colBorder3.appendChild(word3);
-
+    tableBorder.appendChild(tabRow);
+    tabRow.appendChild(tabCol1);
+    tabCol1.appendChild(word1);
+    tabRow.appendChild(tabCol2);
+    tabCol2.appendChild(word2);
+    tabRow.appendChild(tabCol3);
+    tabCol3.appendChild(word3);
 
 
     showToDocument.appendChild(tableBorder);
