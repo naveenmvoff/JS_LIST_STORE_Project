@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
-        .usersBox{
+    <style>
+        .container{
         display: flex;
         border: 2px solid black
     }
-    </style> -->
+    </style>
 </head>
 
 <body>
-    <input id="name"></input>
-    <input id="age"></input>
-    <input id="address"></input>
-    <button type="button" onclick="" id="click">Click me!</button>
+    <input id="name" class="name" placeholder="Name "></input>
+    <input id="age" class="age" placeholder="Age "></input>
+    <input id="address" class="address" placeholder="Address "></input>
+    <button type="button" onclick="getInputValue()" class="click">Click me!</button> <br><br>
+
+    <!-- <table width="100%" border="1">
+        <tr class="tab">
+            <td class="tab1"></td>
+            <td class="tab2"></td>
+            <td class="tab2"></td>
+        </tr>
+    </table> -->
 
     <div class="container"></div> 
-
 
     <script src="projectArray.js"> </script>
 </body>
